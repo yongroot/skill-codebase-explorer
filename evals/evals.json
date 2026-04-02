@@ -1,0 +1,23 @@
+{
+  "skill_name": "codebase-explorer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "帮我探索 /tmp/codebase-explorer-test/rocketmq 这个项目，生成 CLAUDE.md。这是一个 Java 项目，我不太熟悉它，想了解它的核心架构和业务逻辑。",
+      "expected_output": "生成的 CLAUDE.md 应该包含项目定位、技术栈、模块导航（至少覆盖 broker, client, namesrv, store 等核心模块），术语映射，常见陷阱。docs/ 下应有对应的详细文档。整体质量应达到：一个不了解 RocketMQ 的开发者阅读后能理解核心架构。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "重点探索 /tmp/codebase-explorer-test/rocketmq 这个项目的消息存储机制，我需要理解消息是如何被持久化、检索和清理的。",
+      "expected_output": "应该生成一份关于消息存储机制的深入文档，覆盖 CommitLog、ConsumeQueue、IndexFile 等核心存储结构，消息写入和读取流程，以及过期清理策略。文档应包含具体的代码位置引用。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "这个项目 /tmp/codebase-explorer-test/rocketmq 的权限控制和安全机制是怎样的？重点探索 auth 模块。",
+      "expected_output": "应该生成一份关于安全机制的文档，覆盖 ACL 机制、认证流程、权限校验等。如果 auth 模块相对简单，文档可以简洁，但应该包含核心流程和代码定位。",
+      "files": []
+    }
+  ]
+}
